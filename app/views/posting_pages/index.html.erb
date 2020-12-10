@@ -1,0 +1,15 @@
+<h2>ホーム</h2>
+<p><%= notice %></p>
+<div class="posting_block">
+  <table>
+  <% @posting_page.each do |posting_page| %>
+    <tr>
+      <td><%= posting_page.content %></td>
+      <td><%= link_to "ツイートを編集する", edit_posting_page_path(posting_page), data: { confirm: '本当に編集していいですか？' } %></td>
+      <td><%= link_to "ツイートを削除する", posting_page_path(posting_page), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
+    </tr>
+  <% end %>
+  </table>
+</div>
+<br>
+<%= link_to 'ツイートする', new_posting_page_path %>
