@@ -1,0 +1,7 @@
+<h3>以下の内容でツイートする。</h3>
+<%= form_with(model: @posting_page, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <p>内容:<%= @posting_page.content %></p>
+  <%= form.submit  "ツイートする" %>
+  <%= form.submit "戻る", name: 'back' %>
+<% end %>
