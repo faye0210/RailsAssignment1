@@ -1,0 +1,18 @@
+<%= form_with(model: @posting_page, local: true ,url: choose_new_or_edit ) do |form| %>
+  <% if @posting_page.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @posting_page.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @posting_page.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="posting_content">
+    <%= form.text_area :content, placeholder: "今どうしてる？" %>
+  </div>
+  <%= form.submit "呟く" %>
+<% end %>
+<br>
+<%= link_to 'ホームに戻る', posting_pages_path %>
