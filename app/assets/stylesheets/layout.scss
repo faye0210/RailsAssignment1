@@ -1,0 +1,38 @@
+html {
+  font-size: 60%;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+.header {
+  background-color: #00CCFF;
+  height: 80px;
+}
+.header h1 {
+  font-family: fantasy;
+  font-size: 5rem;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+}
+.content_area {
+  width: 100%;
+  margin: 0 auto; /*０は上下の余白が無し、autoは左右の余白を自動設定。この二つで中央揃え*/
+  min-height: 100%;
+}
+.footer {
+ background-color: #999;
+ height: 50px;
+ width: 100%;
+ position: relative;
+ bottom: 0;
+ display: table;
+}
+.footer p {
+ font-size: 1rem;
+ color: #fff;
+ text-align: center;
+ vertical-align: middle;
+ display: table-cell;
+}

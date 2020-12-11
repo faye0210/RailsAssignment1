@@ -1,3 +1,104 @@
 // Place all the styles related to the posting_pages controller here.
 // They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// You can use Sass (SCSS) here: http://sass-lang.com//
+.head_title {
+  color: #ddffff;
+  background-color: #aaa;
+  text-align: center;
+  padding: 10px;
+}
+
+#notice {
+  background-color: #0066ff;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+}
+//index.html.erb
+.post_block {
+  table {
+    left: 50px;
+  }
+
+  #content {
+    display: block;
+    font-size: 2rem;
+    padding: 40px;
+    margin: 10px;
+    background-color: #eee;
+  }
+
+  .edit_delete {
+    padding: 30px;
+    text-decoration: none;
+  }
+
+}
+
+.link{
+  float: right;
+  background-color: #00ccff;
+  height: 50px;
+  width: 180px;
+  padding: 10px;
+  margin: 10px 20px;
+
+  a {
+    text-align: center;
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+//confirm.html.erb
+  #message {
+  text-align: center;
+  font-size: 4rem;
+  margin: 20px;
+}
+.confirmation_message {
+  text-align: center;
+  font-size: 2rem;
+  margin: 30px;
+}
+
+//_form.html.erb
+#error_explanation {
+  text-align: center;
+  background: #FFFFCC;
+  color: red;
+  margin: 20px;
+  padding: 10px;
+  ul{
+    list-style: none;
+    text-align: left;
+  }
+}
+
+.posting_content {
+  text-align: center;
+  margin: 50px;
+
+  input[type="text"]{
+    width: 70%;
+    height: 200px;
+    border: 2px solid #aaa;
+    border-radius: 4px;
+    margin: 10px;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+}
+
+.posting_button{
+  height: 50px;
+  width: 100px;
+  font-size: 2rem;
+  color: #fff;
+  background-color: #00ccff;
+  float: right;
+  margin: 30px;
+}

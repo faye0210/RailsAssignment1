@@ -1,7 +1,11 @@
-<h3>以下の内容でツイートする。</h3>
-<%= form_with(model: @posting_page, local: true) do |form| %>
-  <%= form.hidden_field :content %>
-  <p>内容:<%= @posting_page.content %></p>
-  <%= form.submit  "ツイートする" %>
-  <%= form.submit "戻る", name: 'back' %>
-<% end %>
+<h2 class="head_title">確認画面</h2>
+<br>
+<h3 id="message">以下の内容でツイートする。</h3>
+<div class="confirmation_message">
+  <%= form_with(model: @posting_page, local: true) do |form| %>
+    <%= form.hidden_field :content %>
+    <p>内容:<%= @posting_page.content %></p>
+    <%= form.submit  "ツイートする", class: "posting_button" %>
+    <%= form.submit "戻る", name: 'back', class: "posting_button" %>
+  <% end %>
+</div>

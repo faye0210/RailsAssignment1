@@ -1,15 +1,18 @@
-<h2>ホーム</h2>
-<p><%= notice %></p>
-<div class="posting_block">
+<h2 class="head_title">ホーム</h2>
+<p id="notice"><%= notice %></p>
+<div class="post_block">
   <table>
   <% @posting_page.each do |posting_page| %>
     <tr>
-      <td><%= posting_page.content %></td>
-      <td><%= link_to "ツイートを編集する", edit_posting_page_path(posting_page), data: { confirm: '本当に編集していいですか？' } %></td>
-      <td><%= link_to "ツイートを削除する", posting_page_path(posting_page), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
+      <td id="content"><%= posting_page.content %></td>
+      <td><%= posting_page.created_at %></td>
+      <td class="edit_delete"><%= link_to "ツイートを編集する", edit_posting_page_path(posting_page), data: { confirm: '本当に編集していいですか？' } %></td>
+      <td class="edit_delete"><%= link_to "ツイートを削除する", posting_page_path(posting_page), method: :delete, data: { confirm: '本当に削除していいですか？' } %></td>
     </tr>
   <% end %>
   </table>
 </div>
 <br>
-<%= link_to 'ツイートする', new_posting_page_path %>
+<div class="link">
+  <%= link_to 'ツイートする', new_posting_page_path %>
+</div>

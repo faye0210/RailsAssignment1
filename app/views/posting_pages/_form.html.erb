@@ -10,9 +10,11 @@
     </div>
   <% end %>
   <div class="posting_content">
-    <%= form.text_area :content, placeholder: "今どうしてる？" %>
+    <%= form.text_field :content, placeholder: "今どうしてる？" %>
   </div>
-  <%= form.submit "呟く" %>
+  <%= form.submit "呟く", class: "posting_button" %>
 <% end %>
 <br>
-<%= link_to 'ホームに戻る', posting_pages_path %>
+<div class="link">
+  <%= link_to 'ホームに戻る', posting_pages_path %>
+</div>

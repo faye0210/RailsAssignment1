@@ -9,11 +9,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
-      <h1>Twitterクローン</h1>
+    <header class="header">
+      <h1>Twitter Clone</h1>
     </header>
-    <%= yield %>
-    <footer>
+    <div class="content_area">
+      <%= yield %>
+    </div>
+    <footer class="footer">
       <p>Copyright © 2020 Faye0210 ALL RIGHTS RESERVED.</p>
     </footer>
   </body>
